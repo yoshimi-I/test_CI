@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form_step1</title>
+    <title>確認画面</title>
 </head>
 
 <body>
 
-    <h1>Step1</h1>
-
-    <?php echo validation_errors(); ?>
-    <?php echo form_open('form'); ?>
+    <h1>確認画面</h1>
+    <p>入力した値はこちらでよろしいですか？</p>
 
         <fieldset>
             <p class="attention">テスト送信フォーム</p>
@@ -20,31 +18,31 @@
                 <tbody>
                     <tr>
                         <th>名前: </th>
-                        <td><input type="text" id="name" name="name" value="" /></td>
+                        <td><?php echo $name ?></td>
                     </tr>
                     <tr>
                         <th>メール: </th>
-                        <td><input type="text" name="email1" value="" />
+                        <td><?php echo $email1 ?>
                         @
-                        <input type="text" name="email2" value="" /></td>
+                        <?php echo $email2 ?></td>
                     </tr>
                     <tr>
                         <th>メッセージ記入欄: </th>
                         <td>
-                            <textarea name="textarea" id="textarea" cols="100" rows="10"></textarea>
+                            <textarea name="textarea" id="textarea" cols="100" rows="10"><?php echo $textarea ?></textarea>
                         </td>
                     </tr>
                     <tr>
                     <th>ラジオボックス: </th>
                         <td>
-                                <label for="yes"><input type="radio" id="yes" name="choice" value="yes" />はい</label>
-                                <label for="no"><input type="radio" id="no" name="choice" value="no" />いいえ</label>
+                                <?php echo $choice ?>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </fieldset>
-        <p class="submit"><input type="submit" value="確認画面へ"/></p>
+        <p class="submit"><input type="submit" value="編集" name = "edit"/></p>
+        <p class="submit"><input type="submit" value="このまま送信" name="submit"/></p>
     </form>
 
 </body>
