@@ -20,18 +20,18 @@
                 <tbody>
                     <tr>
                         <th>名前: </th>
-                        <td><input type="text" id="name" name="name" value="" /></td>
+                        <td><input type="text" id="name" name="name" value="<?php echo html_escape(set_value("name"))?>" /></td>
                     </tr>
                     <tr>
                         <th>メール: </th>
-                        <td><input type="text" name="email1" value="" />
+                        <td><input type="text" name="email1" value="<?php echo html_escape(set_value("email1"))?>" />
                         @
-                        <input type="text" name="email2" value="" /></td>
+                        <input type="text" name="email2" value="<?php echo html_escape(set_value("email2"))?>" /></td>
                     </tr>
                     <tr>
                         <th>メッセージ記入欄: </th>
                         <td>
-                            <textarea name="textarea" id="textarea" cols="100" rows="10"></textarea>
+                            <textarea name="textarea" id="textarea" cols="100" rows="10"><?php echo html_escape(set_value("textarea"))?></textarea>
                         </td>
                     </tr>
                     <tr>
