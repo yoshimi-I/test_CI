@@ -34,6 +34,7 @@ class Form extends CI_Controller {
     }
 
     public function send(){
+        $this->load->helper('form');
         $name = $this->input->post('name');
         $email1 = $this->input->post('email1');
         $email2 = $this->input->post('email2');

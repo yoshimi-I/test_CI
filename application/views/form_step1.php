@@ -20,21 +20,21 @@
                     <tr>
                         <?php echo form_error("name") ?>
                         <th>名前: </th>
-                        <td><input type="text" id="name" name="name" value="<?php echo html_escape(set_value("name"));?>" /></td>
+                        <td><input type="text" id="name" name="name" value="<?php echo set_value("name");?>" /></td>
                     </tr>
                     <tr>
                         <?php echo form_error("email1") ?>
                         <?php echo form_error("email2") ?>
                         <th>メール: </th>
-                        <td><input type="text" name="email1" value="<?php echo html_escape(set_value("email1"));?>" />
+                        <td><input type="text" name="email1" value="<?php echo set_value("email1");?>" />
                         @
-                        <input type="text" name="email2" value="<?php echo html_escape(set_value("email2"));?>" /></td>
+                        <input type="text" name="email2" value="<?php echo set_value("email2");?>" /></td>
                     </tr>
                     <tr>
                     
                         <th>メッセージ記入欄: </th>
                         <td>
-                            <textarea name="textarea" id="textarea" cols="100" rows="10"><?php echo html_escape(set_value("textarea"));?></textarea>
+                            <textarea name="textarea" id="textarea" cols="100" rows="10"><?php echo set_value("textarea");?></textarea>
                         </td>
                     </tr>
                     <tr>
