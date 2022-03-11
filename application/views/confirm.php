@@ -21,35 +21,35 @@
                     <tr>
                         <th>名前: </th>
                         <td><?php echo $name ?>
-                            <?php echo form_hidden($name)?></td>
+                            <?php echo form_hidden("name",$this->input->post("name",TRUE))?></td>
 
                     </tr>
                     <tr>
                         <th>メール: </th>
                         <td><?php echo $email1 ?>
-                        <?php echo form_hidden($email1)?>
+                        <?php echo form_hidden("email1",$this->input->post("email1",TRUE))?>
                         @
                         <?php echo $email2 ?></td>
-                        <?php echo form_hidden($email2)?>
+                        <?php echo form_hidden("email2",$this->input->post("email2",TRUE))?>
                     </tr>
                     <tr>
                         <th>メッセージ記入欄: </th>
                         <td>
                         <?php echo $textarea ?></td>
-                            <?php echo form_hidden($textarea)?>
+                            <?php echo form_hidden("textarea",$this->input->post("textarea",TRUE))?>
                         </td>
                     </tr>
                     <tr>
                     <th>ラジオボックス: </th>
                         <td>
                                 <?php echo $choice ?>
-                                <?php echo form_hidden($choice)?>
+                                <?php echo form_hidden("choice",$this->input->post("choice",TRUE))?>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </fieldset>
-        <p class="submit"><input type="submit" value="編集" name = "edit"/></p>
+        <p class="submit"><input type="submit" value="編集" name = "submit"/></p>
         <p class="submit"><input type="submit" value="このまま送信" name="submit"/></p>
     </form>
 
